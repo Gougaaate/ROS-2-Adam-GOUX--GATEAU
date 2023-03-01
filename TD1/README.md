@@ -15,5 +15,9 @@ $ ros2 interface show std_msgs/msg/Float64
 $ ros2 interface show sensor_msgs/srv/Imu
 ```
 ```console
-$ ros2 interface show sensor_msgs/srv/
+$ ros2 interface show std_srvs/srv/Trigger
+```
+### Q3
+```console
+ros2 topic pub -r 1 /cap std_msgs/Float64 "data: 90"
 ```
