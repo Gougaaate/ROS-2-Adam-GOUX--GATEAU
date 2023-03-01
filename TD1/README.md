@@ -31,12 +31,12 @@ $ ros2 node list -a | wc -l
 $ sudo apt install tree
 $ tree
 ```
-![tree](https://github.com/gougaaate/ROS2-Adam-GOUX--GATEAU/blob/main/TD1/tree1.png?raw=true)
+![tree](https://github.com/Gougaaate/ROS-2-Adam-GOUX--GATEAU/blob/main/TD1/tree1.png?raw=true)
 
 ### Question 7
 Same command : 
 ```console
 $ tree
 ```
-![tree]("tree2.png")
+![tree](https://github.com/Gougaaate/ROS-2-Adam-GOUX--GATEAU/blob/main/TD1/tree2.png?raw=true)
 
