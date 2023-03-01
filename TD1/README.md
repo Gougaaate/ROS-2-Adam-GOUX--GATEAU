@@ -39,5 +39,4 @@ Same command :
 $ tree
 ```
 ![tree]("tree2.png")
-=======
->>>>>>> c020c1d157be725cb0486c0ecd7864af39fe79f2
+
