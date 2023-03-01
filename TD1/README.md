@@ -27,3 +27,33 @@ This command counts all the active nodes (including the hidden ones)
 ros2 node list -a | wc -l
 ```
 ### Question 6
+```console
+$ sudo apt install tree
+$ tree
+```
+It shows this, which looks good in your shell.... 
+├── build
+│   └── COLCON_IGNORE
+├── install
+│   ├── COLCON_IGNORE
+│   ├── local_setup.bash
+│   ├── local_setup.ps1
+│   ├── local_setup.sh
+│   ├── _local_setup_util_ps1.py
+│   ├── _local_setup_util_sh.py
+│   ├── local_setup.zsh
+│   ├── setup.bash
+│   ├── setup.ps1
+│   ├── setup.sh
+│   └── setup.zsh
+├── log
+│   ├── build_2023-03-01_16-32-29
+│   │   ├── events.log
+│   │   └── logger_all.log
+│   ├── COLCON_IGNORE
+│   ├── latest -> latest_build
+│   └── latest_build -> build_2023-03-01_16-32-29
+├── README.md
+├── src
+└── TD1
+└── README.md
