@@ -19,11 +19,11 @@ $ ros2 interface show std_srvs/srv/Trigger
 ```
 ### Question 3
 ```console
-ros2 topic pub -r 1 /cap std_msgs/Float64 "data: 90"
+$ ros2 topic pub -r 1 /cap std_msgs/Float64 "data: 90"
 ```
 ### Question 4/5
 This command counts all the active nodes (including the hidden ones)
 ```console
-ros2 node list -a | wc -l
+$ ros2 node list -a | wc -l
 ```
 ### Question 6
