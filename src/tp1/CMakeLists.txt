@@ -31,4 +31,13 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 endif()
 
+add_executable(nodeA src/main_nodeA.cpp)
+ament_target_dependencies(nodeA rclcpp std_msgs)
+target_link_libraries(nodeA "${cpp_typesupport_target}")
+target_include_directories(nodeA PUBLIC
+        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+        $<INSTALL_INTERFACE:include>)
+
+install(TARGETS nodeA
+        DESTINATION lib/${PROJECT_NAME})
 ament_package()

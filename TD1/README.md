@@ -41,3 +41,8 @@ $ tree
 ![tree](https://github.com/Gougaaate/ROS-2-Adam-GOUX--GATEAU/blob/main/TD1/tree2.png?raw=true)
 
 ### Question 9
+
+```console
+$ cd  ../src/tp1/src/main_nodeA.cpp
+```
+Then launch the C++ program *main_nodeA.cpp*
