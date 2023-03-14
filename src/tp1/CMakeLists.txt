@@ -19,6 +19,8 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
+find_package(std_srvs REQUIRED)
+
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
@@ -40,4 +42,16 @@ target_include_directories(nodeA PUBLIC
 
 install(TARGETS nodeA
         DESTINATION lib/${PROJECT_NAME})
+
+
+add_executable(nodeB src/main_nodeB.cpp)
+ament_target_dependencies(nodeB rclcpp std_msgs std_srvs)
+target_link_libraries(nodeB "${cpp_typesupport_target}")
+target_include_directories(nodeB PUBLIC
+        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+        $<INSTALL_INTERFACE:include>)
+
+install(TARGETS nodeB
+        DESTINATION lib/${PROJECT_NAME})
+
 ament_package()

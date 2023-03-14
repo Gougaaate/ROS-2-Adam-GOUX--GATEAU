@@ -18,9 +18,9 @@ class NodeA : public rclcpp::Node {
         /* Constructor of your node with the name "nodeA" */
 
         NodeA() : Node("nodeA") {
-            // Creates a publisher of type std_msgs/msg/String on the "topic" topic, with a maximum queue size of 10 messages.
+            // Creates a publisher of type std_msgs/msg/String on the "/cap" topic, with a maximum queue size of 10 messages.
 
-            publisher_ = this->create_publisher<std_msgs::msg::Float64>("topic", 10);
+            publisher_ = this->create_publisher<std_msgs::msg::Float64>("/cap", 10);
             timer_ = this->create_wall_timer(500ms, std::bind(&NodeA::timer_callback, this));     // Creates a timer that calls the time_callback function every 500ms.
 
             // Note that there are several possible time bases.
