@@ -2,6 +2,7 @@
 #include <functional>
 #include <memory>
 #include <string>
+#include <math.h>
 #include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/string.hpp"
 #include "std_msgs/msg/float64.hpp"
@@ -31,7 +32,7 @@ class NodeA : public rclcpp::Node {
         void timer_callback() {
 
             auto message = std_msgs::msg::Float64();               // Creates a message object of type Float64.
-            message.data = 90;   // Fills the message content.
+            message.data = 90 * sin(this -> now().seconds());   // Fills the message content.
 
             // Prints a log message to the console (fprintf format).
             // It is also possible to use RCLCPP_WARN.
