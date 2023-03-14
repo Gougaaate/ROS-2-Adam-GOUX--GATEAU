@@ -52,5 +52,4 @@ $ ros2 run tp1 nodeA
 
 ### Question 10
 
-"            message.data = 90 * sin(this -> now().seconds());   // Fills the message content.
-"
+```            message.data = 90 * sin(this -> now().seconds());   // Fills the message content.```
