@@ -43,6 +43,13 @@ $ tree
 ### Question 9
 
 ```console
-$ cd  ../src/tp1/src/main_nodeA.cpp
+$ colcon build
 ```
-Then launch the C++ program *main_nodeA.cpp*
+Then in another shell :
+```console
+$ ros2 run tp1 nodeA
+```
+
+### Question 10
+
+```            message.data = 90 * sin(this -> now().seconds());   // Fills the message content.```
