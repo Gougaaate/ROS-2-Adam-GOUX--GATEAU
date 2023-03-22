@@ -1,9 +1,0 @@
-/home/adam/Documents/tp-ros2/src/tp1/cmake-build-debug/CMakeFiles/uninstall.dir
-/home/adam/Documents/tp-ros2/src/tp1/cmake-build-debug/CMakeFiles/tp1_uninstall.dir
-/home/adam/Documents/tp-ros2/src/tp1/cmake-build-debug/CMakeFiles/test.dir
-/home/adam/Documents/tp-ros2/src/tp1/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/adam/Documents/tp-ros2/src/tp1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/adam/Documents/tp-ros2/src/tp1/cmake-build-debug/CMakeFiles/list_install_components.dir
-/home/adam/Documents/tp-ros2/src/tp1/cmake-build-debug/CMakeFiles/install.dir
-/home/adam/Documents/tp-ros2/src/tp1/cmake-build-debug/CMakeFiles/install/local.dir
-/home/adam/Documents/tp-ros2/src/tp1/cmake-build-debug/CMakeFiles/install/strip.dir

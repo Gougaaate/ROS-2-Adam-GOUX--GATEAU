@@ -6,6 +6,7 @@
 #include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/string.hpp"
 #include "std_msgs/msg/float64.hpp"
+#include "example_interfaces/srv/add_two_ints.hpp"
 
 using namespace std::chrono_literals;
 /*
@@ -32,7 +33,7 @@ class NodeA : public rclcpp::Node {
         void timer_callback() {
 
             auto message = std_msgs::msg::Float64();               // Creates a message object of type Float64.
-            message.data = 90 * sin(this -> now().seconds());   // Fills the message content.
+            message.data = 90 * sin(this -> now().seconds());      // Fills the message content.
 
             // Prints a log message to the console (fprintf format).
             // It is also possible to use RCLCPP_WARN.
@@ -45,12 +46,11 @@ class NodeA : public rclcpp::Node {
         rclcpp::Publisher<std_msgs::msg::Float64>::SharedPtr publisher_;
      };
 
-int main(int argc, char *argv[]) {
 
-    rclcpp::init(argc, argv);       // Initialize ROS 2 for the executable.
+int main(int argc, char **argv){
+    rclcpp::init(argc, argv);
+    std::shared_ptr<rclcpp::Node> node = rclcpp::Node::make_shared("add_two_ints_server");
 
-    rclcpp::spin(std::make_shared<NodeA>());// Creates the node and wait for messages or timer events. Note that this function is blocking!
-
-    rclcpp::shutdown();         // Shuts down ROS-2
-    return 0;
+    rclcpp::spin(node);     //This puts the node on hold by listening for potential service requests.
+    rclcpp::shutdown();
 }
