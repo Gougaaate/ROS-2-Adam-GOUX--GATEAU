@@ -40,14 +40,14 @@ class NodeA : public rclcpp::Node {
             // Outside a node, rclcpp::get_logger("rclcpp") can be used.
 
             RCLCPP_INFO(this->get_logger(), "Publishing: '%f'", message.data);
-            publisher_->publish(message);   // Publishes the message using the publisher object.
+            publisher_->publish(message);    // Publishes the message using the publisher object.
         }
         rclcpp::TimerBase::SharedPtr timer_; // Timer object.
         rclcpp::Publisher<std_msgs::msg::Float64>::SharedPtr publisher_;
      };
 
 
-int main(int argc, char **argv){
+int main(int argc, char **argv) {
     rclcpp::init(argc, argv);
     std::shared_ptr<rclcpp::Node> node = rclcpp::Node::make_shared("add_two_ints_server");
 

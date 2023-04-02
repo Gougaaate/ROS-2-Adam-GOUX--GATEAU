@@ -9,7 +9,7 @@ using namespace std::placeholders;
 class Subscriber : public rclcpp::Node {
     public:
         Subscriber() : Node("nodeB"){
-    // Créer un subcripter sur le topic "topic" de type String qui appellera la fonction
+    // Créer un subcripter sur le topic "/cap" de type Float64 qui appellera la fonction
     // topic_callback pour chaque nouveau message
             subscription_ = this->create_subscription<std_msgs::msg::Float64>("/cap", 10, std::bind(&Subscriber::topic_callback, this, _1));
         }
